@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/helloworld', async (req, res) => {
-  return res.send('hello world');
+  return res.send('hello world updated');
 });
 
 module.exports = router;
