@@ -15,7 +15,7 @@ router.post('/register', async (req, res) => {
     await service.save();
     res.status(201).json({ message: 'Service enregistré avec succès !', service });
   } catch (error) {
-    res.status(500).json({ message: 'Erreur lors de l’enregistrement.', error: error.message });
+    res.status(500).json({ message: 'Erreur lors de l\'enregistrement.', error: error.message });
   }
 });
 
