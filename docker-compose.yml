@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   api-gateway:
-    build: ../api-gateway
+    build: .
     volumes:
       - api-gateway-data:/usr/src/app
       - /usr/src/app/node_modules
