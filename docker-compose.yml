@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build: ../api-gateway
+    volumes:
+      - api-gateway-data:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+
+  sidecar:
+    build: ../sidecar
+    volumes:
+      - api-gateway-data:/usr/src/app
+    depends_on:
+      - api-gateway
+
+volumes:
+  api-gateway-data:
