@@ -28,7 +28,9 @@ router.get('/', async (req, res) => {
     res.status(500).json({ message: 'Erreur lors de la récupération des services.', error: error.message });
   }
 });
-router.get('/helloworld',(req,res)=>{
-  return res.send('hello nextu');
-})
+
+router.get('/helloworld', async (req, res) => {
+  return res.send('hello world');
+});
+
 module.exports = router;
