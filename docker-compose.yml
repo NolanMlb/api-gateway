@@ -4,7 +4,7 @@ services:
   api-gateway:
     build: .
     volumes:
-      - api-gateway-data:/usr/src/app
+      - api-gateway-data-v1:/usr/src/app
       - /usr/src/app/node_modules
     ports:
       - "3000:3000"
@@ -12,9 +12,9 @@ services:
   sidecar:
     build: ../sidecar
     volumes:
-      - api-gateway-data:/usr/src/app
+      - api-gateway-data-v1:/usr/src/app
     depends_on:
       - api-gateway
 
 volumes:
-  api-gateway-data:
+  api-gateway-data-v1:
